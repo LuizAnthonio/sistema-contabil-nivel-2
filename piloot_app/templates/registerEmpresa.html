@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+<title>Registrar Empresa</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="botoes inicial-3 direita-2">
+   
+    <a href="/select-empresa" class="ski-btn-a ">voltar</a>
+   
+</div>
+
+<div class="center inicial">
+    <h1 class="title inicial-2">Registrar Empresa</h1>
+    <form method="post" class="ski-form-1 " action="{% url 'registerEmpresa' %}">
+        {% csrf_token %}
+           
+       
+        <input type="text" name="empresa" class="input-1 extend" placeholder="Digite o nome da empresa que quer registrar">
+        
+        
+        <button class="ski-btn-3 extend">Registrar Empresa</button>
+    
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}

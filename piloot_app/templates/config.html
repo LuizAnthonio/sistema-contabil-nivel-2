@@ -1,0 +1,44 @@
+
+{% extends "base/base.html" %}
+
+
+{% block title %}
+
+
+   <title>Configuração</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="botoes inicial-3 direita-2">
+   
+    <a href="/select-empresa" class="ski-btn-a ">voltar</a>
+   
+</div>
+
+<div class="center inicial">
+    <h1 class="title inicial-2">Trocar tema</h1>
+    <form method="post" class="ski-form-1 " action="{% url 'config' %}">
+        {% csrf_token %}
+           
+       
+        <select name="tema" class="input-1 extend">
+            
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+        
+        <button class="ski-btn-3 extend">Mudar de tema</button>
+    
+    </form>
+
+</div>
+
+
+{% endblock %}
+    
+    
+    

@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+
+
+{% block title %}
+<title>Selecionar Empresa</title>
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="title">Bem-Vindo(a) {{request.user.username}}</h1>
+<h4 class="title">Selecione a Empresa:</h4>
+
+
+<div class="center  ski-fcolum centro">
+    
+    {%for empresa in empresas %}
+    
+    <a href="/home/{{empresa.id_E}}" class="selectEmpresa">{{empresa.nome_empresa}}</a>
+    
+    
+    {% endfor %}
+
+    
+
+</div>
+
+
+{% endblock %}

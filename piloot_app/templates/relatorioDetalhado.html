@@ -1,0 +1,125 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+<title>{{pagina}}</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="botoes inicial-3 ">
+    <a href="/home/{{emp}}/" class="ski-btn-a">Home</a>
+    <a href="/lancar/" class="ski-btn-a">Lançar</a>
+    <a href="/{{emp}}/{{paginaG}}/{{anoIni}}/" class="ski-btn-a">{{paginaG}} Anual</a>
+    <a href="/{{emp}}/periodo" class="ski-btn-a">Pesquisar por periodo</a>
+</div>
+<h1 class="title title-2">{{pagina}}</h1>
+<h2 class="title inicial-3"> {{mes}} e o {{anoIni}}</h2>
+
+<div class="center inicial-2 centro ski-fcolum">
+
+    
+    <span>Mês:</span>
+    <div class="selecMeses">
+        {% for me in meses2 %}
+        <a href="/{{emp}}/{{paginaG}}-detalhada/{{me.num}}/{{anoIni}}" class="ski-btn-a-2">{{me.mes}}</a>
+        
+        {% endfor %}
+    </div>
+    
+    <span>Ano:</span>
+    <div class="selecAnos">
+        {% for anos in anosT %}
+        <a href="/{{emp}}/{{paginaG}}-detalhada/1/{{anos}}" class="ski-btn-a-2">{{anos}}</a>
+        
+        {% endfor %}
+    </div>
+    
+    <h1 class="title title-2">{{ano}}</h1>
+   
+
+
+    
+        <table class="ski-tab-1">
+            <tr class="cabecalho-tab">
+                <th>titulo da {{pagina}}</th>
+                <th>data cadastrada</th>
+                <th>valor</th>
+            </tr>
+            
+            {% for dados in dados %}
+            
+            <tr class="base-tab">
+                <td>{{dados.titulo}}</td>
+                <td>{{dados.data}}</td>
+                <td>{{dados.valor}}</td>
+                
+            </tr>
+            {% endfor %}
+    
+           
+    
+        </table>
+
+        <div class="clicaveis-mosaico">
+            
+            <a  class="clicaveis-2">
+                
+                    <span>Margem Total ({{percent}}%) </span>
+                    <span class="valor-1">{{margem}}</span>
+                    
+                </a>
+                <a class="clicaveis-2">
+                <span>Saque</span>
+                <span class="valor-1">{{saque}}</span>
+            
+            </a>
+            
+        </div>
+<div class="geral center centro ski-fcolum">
+    <div class="total-container  ski-alinhar">
+        <div >
+          
+            <span>Saldo da {{pagina}}:</span>
+            <br>
+            <h2>{{mes}} de {{anoIni}}</h2>
+            
+           
+            
+        </div>
+        <div >
+            <h2 class="title">{{saldo}}</h2>
+        </div>
+    </div>
+    <div class="total-container ski-alinhar">
+        <div >
+          
+            <span>{{pagina}} de:</span>
+            
+         
+            <h2>{{mes}}</h2>
+            
+           
+            
+        </div>
+        <div >
+            <h2 class="title">{{totalMes}}</h2>
+        </div>
+    </div>
+
+    <div class="total-container  ski-alinhar">
+        <div >
+          
+            <span>{{pagina}} <br>ANUAL de:</span>
+            <br>
+            <h2>{{anoIni}}</h2>
+           
+            
+        </div>
+        <div >
+            <h2 class="title">{{anualTotal}}</h2>
+        </div>
+    </div>
+</div>
+        
+{% endblock %}
+

@@ -1,0 +1,78 @@
+{% extends "base/base.html" %}
+
+
+{% block title %}
+<title>Registrar</title>
+
+{% endblock %}
+
+{% block content %}
+<section>
+
+    <div class="center inicial">
+
+        <form method="post" class="formulario ski-form-1" action="{% url 'lancar' %}">
+       
+            {% csrf_token %}
+                <div class="flex">
+                    {% for ops in opcoes %}
+
+                    <label class="opcao ">
+                        <span>{{ops.nome_op}}</span>
+                        <input type="radio"   name="opcao-ipunt" value="{{ops.id}}" >
+        
+                    </label>
+
+
+                    {% endfor %}
+
+                </div>
+
+
+            <input type="text" name="titulo" class="input-1 extend"  placeholder="Digite seu...">
+
+            <div class="valores extend">
+                <input type="date" name="data" class="input-1 extend" placeholder="Digite seu...">
+                <input type="text" name="valor" class="input-1 extend" placeholder="Digite valor">
+
+            </div>
+    
+            
+            
+            <div class="empresas extend">
+                <select name="empresas" class="input-1 extend">
+                    {% for op in empresas %}
+                    <option value="{{op.id_E}}">{{op.nome_empresa}}</option>
+                    {% endfor %}
+                </select>
+                 
+            </div>
+    
+            <div class="opcoes ski-alinhar ">
+                <label>
+                    <span>À vista</span>
+                    <input type="radio" checked name="radiop" value="True" >
+                </label>
+                
+                
+                <div class="parcela ski-fcolum">
+                    
+                    <label>
+                        <span>Parcelado</span>
+                        <input type="radio" name="radiop" value="False">
+                    </label>
+                    
+                    <input type="number" name="qtd" class="input-1"  placeholder="Digite quantidade de parcelas">
+                </div>
+            </div>
+    
+            
+            <button class="ski-btn-3 extend">Lançar</button>
+    
+        </form>
+    </div><!--center-->
+
+</section>
+
+{% endblock %}
+

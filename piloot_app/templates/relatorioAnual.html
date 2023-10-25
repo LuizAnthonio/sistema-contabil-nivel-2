@@ -1,0 +1,88 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+<title>{{pagina}} Anual</title>
+{% endblock %}
+
+{% block content %}
+<div class="botoes direita-2">
+    <a href="/home/{{emp}}/" class="ski-btn-a">Home</a>
+    <a href="/lancar/" class="ski-btn-a">Lançar</a>
+    {% if pagina == "Saldo" or pagina == "Compra, insumo e outras" %}
+    
+    {% else %}
+    <a href="/{{emp}}/{{pagDir}}-detalhada/1/{{ano}}/" class="ski-btn-a">Detalhar {{pagina}}</a>
+
+    {% endif %}
+
+</div>
+<div class="center inicial  centro ski-fcolum">
+    <h1 class="title">{{pagina}} Anual</h1>
+    <br>
+    <br>
+
+    
+    <span >Ano:</span>
+    <div class="selecAnos">
+        {% for anos in anos %}
+        <a href="/{{emp}}/{{pagDir}}/{{anos}}/" class="ski-btn-a-2">{{anos}}</a>
+        
+        {% endfor %}
+    </div>
+    
+    <br>
+    <h1 class="title title-2 ">{{ano}}</h1>
+    <br>
+    <br>
+    
+    <table class="ski-tab-1 inicial" >
+            <tr class="cabecalho-tab">
+                {% for mes in meses %}
+                <th>{{mes}}</th>
+                
+                {% endfor %}
+            </tr>
+            
+            <tr>
+                {% for dados in anual %}
+                <td>{{dados}}</td>
+                {% endfor %}
+            
+                
+            </tr>
+    
+        </table>
+
+</div>
+
+<div class="geral center centro ski-fcolum">
+    <div class="total-container  ski-alinhar">
+        <div >
+          
+            <span>{{pagina}} de:</span>
+            <br>
+            <span>{{ano}}</span>
+            
+        </div>
+        <div >
+            <h2 class="title">{{total}}</h2>
+        </div>
+    </div>
+    <div class="total-container  ski-alinhar">
+        <div >
+          
+            <span>{{pagina}} TOTAL</span>
+            <br>
+            <span>GERAL</span>
+           
+        </div>
+        <div >
+            <h2 class="title">{{totalGeral}}</h2>
+        </div>
+    </div>
+    
+
+</div>
+
+{% endblock %}
+

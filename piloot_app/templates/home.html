@@ -1,0 +1,86 @@
+
+{% extends "base/base.html" %}
+
+
+{% block title %}
+
+
+   <title>Homes</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="center">
+
+    <div class="botoes inicial-3 ">
+      
+        <a href="/lancar/" class="ski-btn-a dataSelec">Lançar</a>
+        <details >
+            <summary class="ski-summ-2 ">Relatórios</summary>
+            <a href="/{{emp}}/{{direct.franquia}}" class="ski-btn-a dataSelec">Franquia</a>
+            <a href="/{{emp}}/{{direct.despesa}}" class="ski-btn-a dataSelec">Despesa</a>
+            <a href="/{{emp}}/{{direct.receita}}" class="ski-btn-a dataSelec">Receita</a>
+        </details>
+        <details >
+            <summary class="ski-summ-2 ">Relatórios Detalhados</summary>
+            <a href="/{{emp}}/{{direct2.franquia}}" class="ski-btn-a dataSelec">Franquia Detalhada</a>
+            <a href="/{{emp}}/{{direct2.despesa}}" class="ski-btn-a dataSelec">Despesa Detalhada</a>
+            <a href="/{{emp}}/{{direct2.receita}}" class="ski-btn-a dataSelec">Receita Detalhada</a>
+        </details>
+       
+    </div>
+
+   
+    <div class="clicaveis-mosaico">
+        <a href="/{{emp}}/{{direct.receita}}" class="clicaveis-2 ">
+            <span>Receita Real</span>
+            <span class="valor-1">{{receitaReal}}</span>
+            
+        </a>
+        <a href="/{{emp}}/{{direct.despesa}}" class="clicaveis-2 ">
+            <span>DESPE. REAL</span>
+            
+            <span class="valor-1">{{despesaReal}}</span>
+        </a>
+        <a href="/{{emp}}/{{direct.franquia}}" class="clicaveis-2">
+            <span>FRANQUIA REAL</span>
+            
+            <span class="valor-1">{{franquiaReal}}</span>
+            
+        </a>
+        <a href="/{{emp}}/{{direct.saldo}}" class="clicaveis-2">
+            <span>SALDO  REAL</span>
+            <span class="valor-1">{{saldoReal}}</span>
+        
+        </a>
+        
+    </div>
+    
+    <div class="geral center centro ski-fcolum">
+        <a href="/{{emp}}/{{direct.compra}}" class="clicaveis ski-alinhar">
+            <span>COMPRA ISUMO EMB LIMP GAS AGUA E OUTRAS 2,25</span>
+            <br>
+            <h2>{{compraT}}</h2>
+        </a>
+        <a  class="clicaveis ski-alinhar">
+            <span>LUCRO REAL</span>
+            <br>
+            <h2>{{lucroT}}</h2>
+        </a>
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    {{valor}}
+</div>
+    
+    {% endblock %}
+    
+    
+    

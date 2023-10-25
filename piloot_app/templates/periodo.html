@@ -1,0 +1,117 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>{{pagina}} Detalhada</title>
+
+{% endblock %}
+
+
+{% block content %}
+<section class="inicial-2">
+    <div class="botoes inicial-3">
+        <a href="/home/{{emp}}/" class="ski-btn-a">Home</a>
+        <a href="/lancar/" class="ski-btn-a">Lançar</a>
+       
+    </div>
+
+    <h1 class="title title-2">Busca por periodo</h1>
+
+    
+        <div class="center ski-alinhar ski-fcolum centro ">
+    
+            
+                <div class="filtro center inicial ">
+                    <form>
+                        <input type="search" name="busca" class="input-1 busca-input" placeholder="Pesquise aqui">
+                        
+                        <div class="valores ">
+
+                            <label class="dataSelec ">
+                                <span class="">De </span>
+                                <input type="date" class="input-1" name="inicio" >
+
+                            </label>
+                            
+
+                            <label class="dataSelec">
+                                <span>  Até</span>
+                                <input type="date" class="input-1" name="fim" >
+
+                            </label>
+
+                            
+
+                        </div>
+
+
+
+                        
+                        <button class="ski-btn-3 extend">Filtrar</button>
+                        <div class="ski-alinhar">
+
+                            <a class="ski-btn-a" href="/periodo">limpar</a>
+                        </div>
+                        
+                        
+                       
+                    </form>
+
+            
+                </div>
+            
+                <table class="ski-tab-1" >
+
+                    <tr class="cabecalho-tab">
+                        <th>  </th>
+                        <th>titulo da {{pagina}}</th>
+                        <th>data cadastrada</th>
+                        <th>tipo</th>
+                        <th>valor</th>
+                    </tr>
+                    
+                    <tbody>
+                        {% for dados in dados %}
+                        
+                        
+                        <tr class="base-tab" >
+                            <td>{{dados.posi}}</td>
+                            <td>{{dados.titulo}}</td>
+                            <td>{{dados.data}}</td>
+                            <td>{{dados.tipo.nome_op}}</td>
+                            <td>{{dados.valor}}</td>
+                            
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+            
+                    
+            
+                </table>
+
+                <div class="geral center centro ski-fcolum">
+                    <div class="total-container  ski-alinhar">
+                        <div >
+                            {% if geral == True %}
+                            <span>TOTAL DURANTE O PERIODO:</span>
+                            <br>
+                            <span>{{inicio}} até {{fim}}</span>
+                            {% else %}
+                            <span>TOTAL DURANTE O PERIODO:</span>
+                            <br>
+                            <span>Geral</span>
+                            
+                            {% endif %}
+                        </div>
+                        <div >
+                            <h2 class="title">{{totalMes}}</h2>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+
+        </div>
+</section>
+
+{% endblock %}

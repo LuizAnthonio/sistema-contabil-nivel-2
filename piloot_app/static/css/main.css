@@ -1,0 +1,1231 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.dark{
+    color: white;
+    background-color: rgba(0, 44, 44, 1);
+    
+}
+
+.dark .title{
+    color: white;   
+}
+
+.dark span{
+    color: white;   
+}
+
+.dark tr{
+    color: white;
+}
+
+.dark tr:hover{
+    background-color: #14c800;
+    color: white;
+}
+
+.dark tr:nth-child(odd){
+    color:black;
+}
+
+
+
+span.text-dark{
+    color: white;
+
+}
+
+html,body{
+    height: 100%;
+}
+
+.center{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+
+}
+
+.clear{clear: both;}
+
+.ski-single{
+    float: left;
+    width: 50%;
+
+}
+
+section.topo{
+    background-image: linear-gradient(114deg,#250e8a,#00f9f7);
+    padding-top:40px;
+    padding-bottom: 80px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.conteudo{
+    width: 70%;
+}
+
+.lateral{
+    width: 280px;
+    height: 100vh;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    background-color: black;
+    color: white;
+    position: fixed;
+    left: 0%;
+    top: -0px;
+}
+
+header.topo{
+    background-image: radial-gradient(114deg,#E96200,white);
+    
+   
+    padding-top:30px;
+    padding-bottom: 40px;
+    padding-right: 2%;
+    padding-left: 2%;
+    
+}
+
+.logo{
+    float: left;
+}
+
+.menu-desktop{
+    float: right;
+}
+
+.logo{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+
+.menu-desktop li{
+   display: inline-block;
+   margin: 0 15px;
+}
+
+.menu-desktop-2 li{
+   display: inline-block;
+   margin: 0 15px;
+   padding: 10px;
+}
+
+.menu-desktop-2 a{
+    text-decoration: none;
+    
+    
+    
+}
+
+.clicaveis{
+    width: 50%;
+    max-width: 600px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #13b401;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+.clicaveis span{
+    position: relative;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 15px;
+    
+
+}
+
+
+
+.clicaveis-mosaico{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: none;
+    padding: 10px 1px;
+
+}
+
+.clicaveis-mosaico a{
+    width: 46%;
+    
+
+}
+.clicaveis-mosaico a{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+
+    
+
+}
+
+
+.clicaveis-2{
+    width: 34%;
+    height: 100px;
+    padding: 2%;
+    margin: 7px;
+    border-radius: 10px;
+    background-color: #27c500;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.clicaveis-2 span{
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+.clicaveis-2 .valor-1{
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 2px;
+    text-align: center;
+}
+
+
+
+
+
+.clicaveis-mosaico h2{
+    position: relative;
+    top: 1px;
+    font-size: 1px;
+    right: 1px;
+
+}
+.clicaveis h2{
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+    right: 20px;
+
+}
+
+.clicaveis:nth-child(odd){
+    background-color: #14c800;
+}
+
+
+
+.flex{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+}
+
+.flex label{
+    width: 34%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.coloT{
+    color: #E96200;
+}
+
+.menu-desktop a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.6;
+}
+
+.menu-desktop a:hover{
+    opacity: 1;
+}
+.ski-lista{
+    float: right;
+}
+
+.ski-lista li{
+   display: inline-block;
+   margin: 0 15px;
+   line-height: 40px;
+}
+
+.ski-lista a{
+    text-decoration: none;
+    color: #909090;
+    opacity: 1;
+}
+
+.ski-lista a:hover{
+    color: #7b7b7b;
+}
+
+
+.ski-btn-y{
+   
+    width: 12rem;
+    height: 45px;
+    background-color: rgb(255, 196, 0);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 196, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: #250e8a;
+    
+}
+
+.ski-single h1{
+    font-size: 42px;
+    text-align: justify;
+    color: white;
+}
+
+.ski-single p{
+    width: 67%;
+    color: white;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.espaco-cima{
+    padding: 3% 0;
+}
+
+.equipe img{
+    width: 100%;
+    height: 50vh;
+
+}
+
+.bola{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 76%;   
+    margin: 0 auto;
+    left: 50%;
+    box-shadow: 20px 1px 40px 0.1px #cccc;
+}
+.bola h1{
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 100;
+    font-stretch: wider;
+    
+    
+}
+
+.marcas{
+    height: 40vh;
+    width: 100%;
+    padding: 2%;
+}
+
+.selecAnos{
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ski-alinhar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ski-alinhar img{
+
+    margin: 10px;
+}
+
+.ponta-a-ponta .title-topo{
+    font-weight: 300;
+    font-size: 30px;
+
+}
+
+.ponta-a-ponta{
+    padding: 2%;
+    height: 80vh;
+}
+
+
+.inlineB{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.ski-single-card{
+    width: 33%;
+    margin: 10px;
+    
+}
+
+.ski-single-card img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.job img{
+    width: 100%;
+}
+
+.time .ski-single .title {
+    width: 100%;
+    padding: 2%;
+    color: #250e8a;
+    font-size: 35px;
+    font-weight: 400;
+    margin:  0 22px;
+    line-height: 40px;
+    text-align: left;
+
+
+  
+
+}
+
+.time p{
+    width: 85%;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #909090;
+    text-align: left;
+}
+
+.ski-single-card h2{
+    font-weight: 200;
+    font-size: 21px;
+}
+
+.ski-single-card p{
+    text-align: center;
+    width: 80%;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #909090;
+}
+
+.ski-fcolum{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.title{
+    text-align: center;
+    font-weight: 400;
+}
+
+.title-2{
+    font-size: 35px;
+    font-weight: 400;
+    color: black;
+    
+}
+
+.title-3{
+    font-size: 55px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    
+}
+
+.title-1{
+    text-align: center;
+    font-weight: 400;
+    color: black;
+}
+
+.time{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(244, 249, 253, 1);
+}
+
+.ski-perfil-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.ski-perfil-1 p{
+    font-style: italic;
+    font-weight: 100;
+    font-size: 18px;
+    
+}
+
+.ski-perfil-1 img{
+    width: 50px;
+    height: 50px;
+
+}
+
+.depoimentos{
+    
+  background-color: #250e8a;
+    color: white;
+    padding: 100px 0;
+    overflow: hidden;
+    
+    
+}
+
+
+
+.depoimentos-single{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100%;
+
+
+
+}
+.ski-paragrafo{
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.ski-dep{
+    width: 80%;
+    max-width: 800px;
+    
+
+}
+
+.ski-lista-1 a{
+    color: #909090;
+    text-decoration: none;
+    background-color: #00f9f7;
+
+}
+
+
+.ski-single-card a{
+    text-decoration: none;
+    
+
+}
+
+.teste{
+    color: red;
+}
+
+.ski-lista-1{
+    color: #00f9f7;
+    text-decoration: none;
+}
+
+.aspas{
+    position: relative;
+    
+    bottom: 130px;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.ski-contato-1{
+    width: 100%;
+    height: 50vh;
+    padding: 2%;
+    background-color: white;
+    position: relative;
+    float: inline-start;
+    top: -150px;
+    border-top: 1px top yellow;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.infos-footer{
+    position: relative;
+    bottom: 100px;
+}
+
+.ski-bushi-1{
+    box-shadow: 1px 100px  101px  #cacaca60;
+}
+
+.ski-contato-1 p{
+    width: 55%;
+    text-align: center;
+    font-size: 14px;
+    color: #909090;
+    line-height: 30px;
+}
+
+.ski-btn-2{
+    width: 12rem;
+    height: 45px;
+    background-color: #250e8a;
+    border-radius: 5px;
+    border: 1px solid #250e8a;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+
+}
+.ski-btn-3{
+    width: 12rem;
+    height: 45px;
+    background-color: #E96200;
+    border-radius: 5px;
+    border: 1px solid #E96200;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+
+}
+
+.depoimentos .title{
+    position: relative;
+    bottom: 50px;
+}
+
+
+
+/****SLICK SLIDER****/
+
+.slick-dotted ul{
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	margin-top:10px;
+}
+
+.slick-dotted li{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.slick-dotted button:focus{
+	outline: 0;
+}
+
+.slick-dotted li button{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	color: #d8d8d8;
+	border-width: 0;
+	background: #d8d8d8;
+	opacity: 1;
+	cursor: pointer;
+}
+
+li.slick-active button{
+	background: #0c3f8a;
+	color: #0c3f8a;
+}
+
+.slick-slide:focus { outline: none; }
+
+/**END SLICK**/
+
+
+
+section.depoimentos{
+	padding: 100px 0;
+    padding-bottom: 200px;
+	background-color: #23188f;
+}
+
+section.depoimentos h2{
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.depoimentos-box{
+	margin:10px auto;
+	max-width: 800px;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+}
+.depoimento-single{width: 100%;display: inline-block;}
+.depoimento-single p{text-align: center;margin-bottom: 15px;color: white;}
+.depoimento-single img{
+	width: 70px;
+	height: 70px;
+	display: block;
+	margin: 10px auto;
+	border-radius: 50%;
+}
+
+.footer{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+section.contato .title{
+    color: black;
+}
+
+.input-1{
+    border: 1px solid #e4e3e3;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 10px 1px #ececec;
+    outline: none;
+}
+
+.ski-container-1{
+    width: 400px;
+
+}
+
+.filtro .valores{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dataSelec{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+
+
+
+textarea{
+    border: 1px solid #e4e3e3;
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 10px 1px #ececec;
+
+}
+
+.ski-form-1{
+   width: 400px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+    margin: 0 auto;
+   
+}
+
+.extend{
+    width: 100%;
+}
+
+.opcao{
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.opcao input.opcao-input{
+    margin: 10px;
+}
+
+
+.left{
+    
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.direita{
+    
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+section.contato{
+    height: 100vh;
+    padding: 10px 0;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.contato .ski-paragrafo-1{
+    color: black;
+}
+
+.mapinha{
+    width: 100%;
+    padding: 4%;
+}
+
+.inicial{
+    padding: 100px 0;
+    width: 100%;
+   color: black;
+}
+
+.inicial-2{
+    padding: 50px 0;
+    width: 100%;
+   color: black;
+}
+
+.inicial-3{
+    padding: 25px 0;
+    width: 100%;
+   color: black;
+}
+
+
+.ski-mosaico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 100px 0;
+    
+    
+    
+}
+
+.ski-mosaico img{
+    
+    margin: 2px;
+    height: 200px;
+    width: 33%;
+    padding: 10px;
+    
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.cabecalho-tab {
+    background-color: #E96200;
+    color: white;
+    height: 34px;
+}
+table.ski-tab-1 tr.cabecalho-tab {
+    background-color: #E96200;
+    color: white;
+    height: 34px;
+}
+
+
+
+
+tr.tab-res{
+    background-color: #e9610076;
+    height: 32px;
+}
+
+tr.base-tab:nth-child(odd){
+
+    background-color: white;
+
+}
+
+
+tr.base-tab{
+    background-color: #ffcca8;
+    color: black;
+    transition: 0.5s;
+    
+}
+
+
+tr.base-tab:hover{
+    background-color: #aeff9a74;
+    color: white;
+    transition: 0.5s;
+}
+
+.ski-summ-2{
+    width: 100%;
+    height: 50px;
+    background-color: #91f386;
+    color: #0b6d00;
+    text-align: center;
+    padding: 10px;
+    margin: 4px 0;   
+    text-transform: uppercase;
+}
+
+.selectEmpresa{
+    width: 100%;
+    max-width: 600px;
+    height: 70px;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #27C300;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 23px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.selectEmpresa:hover{
+    background-color: #E96200;
+    transition: 0.5s;
+}
+
+
+.direita-2{
+    text-align: right;
+}
+
+.config{
+    width: 30px;
+    height: 30px;
+    
+
+}
+.config a{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+
+@media (max-width:800px) {
+    .botoes{
+        display: flex;
+       
+        flex-wrap: wrap;
+    }
+
+    .botoes a{
+        width: 33%;
+    }
+    
+}
+
+.mudarEmpresa{
+
+    background-color: #13b401;
+    width: 60%;
+    height: 40px;
+    display: flex;
+    border-radius: 1px 1px 12px 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
+    transition: 0.5s;
+}
+
+.config a.title{
+    font-size: 16px;
+}
+
+.mudarEmpresa:hover{
+    background-color: #E96200;
+    transition: 0.5s;
+}
+
+.mudarEmpresa-2{
+
+    background-color: #f3c986;
+    width: 60%;
+    height: 40px;
+    display: flex;
+    border-radius: 1px 1px 12px 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
+    transition: 0.5s;
+}
+
+.mudarEmpresa-2:hover{
+    background-color: #E96200;
+    transition: 0.5s;
+    color: #ffffff;
+}
+table.ski-tab-1 tbody tr{
+    border-bottom: 1px solid black;
+    height: 32px;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+
+tr.base-tab{
+    border-bottom: 1px solid black;
+    height: 32px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.busca-input{
+    width: 100%;
+    
+}
+
+.ski-tab-1{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.inicial :is(p,h1,h2){
+    color: black;
+}
+
+.img-container{
+    width: 100%;
+}
+
+.total-container:nth-child(odd){
+    background-color: #E96200;
+}
+
+.dest{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.caixa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-container{
+    width: 100%;
+    max-width:560px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #27C300;
+    justify-content: space-between;
+    color: white;
+    margin: 10px;
+    padding: 0 20px;
+    
+}
+
+.selecMeses{
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+@media (max-width:900px) {
+    .selecMeses{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 30vh;
+        
+    }
+
+    .ski-tab-1 th{
+        font-size: 12px;
+        
+    }
+
+    .ski-tab-1 td{
+        font-size: 13px;
+
+    }
+    
+    
+
+}
+@media (max-width:600px) {
+    
+
+    .ski-tab-1 th{
+        font-size: 12px;
+        
+    }
+
+    .ski-tab-1 td{
+        font-size: 9px;
+        padding: 1px;
+
+    }
+
+    .ski-tab-1 td::selection{
+        background-color: #27C300;
+        color: white;
+    }
+    .ski-tab-1 td:hover{
+        background-color: #27C300;
+        color: white;
+    }
+    
+    
+
+}
+
+a.ski-btn-a{
+    
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    border-radius: 5px;
+    padding: 14px 20px;
+    background-color: #f3c986;
+    margin: 5px 0;
+
+    text-decoration: none;
+    color: black;
+
+}
+a.ski-btn-a-2{
+    
+    width: 100%;
+    text-align: center;
+    max-width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 14px 20px;
+    background-color: #91f386;
+    margin: 1px;
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.total-container .title{
+    color: white;
+}
+
+.geral{
+    width: 100%;
+}
+
+.fotos{
+    height: 80vh;
+    background-color: #F4F9FD;
+}
+
+.ski-summ-1{
+    width: 100%;
+    height: 40px;
+    background-color: #27C300;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+details{
+    width: 100%;
+
+}
+
+.ski-summ-1 nav { 
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    background-color: #c3000067;
+}
+
+
+.footer-2{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+
+}
+
+
+.footer-2 .infos-footer{
+    position: relative;
+    top: 15%;
+}
+
+
+
