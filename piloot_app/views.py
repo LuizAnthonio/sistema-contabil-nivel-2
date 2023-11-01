@@ -602,7 +602,7 @@ def cadastrarUser(request):
         
 
 
-        return render(request,"cadastrar.html")
+        return redirect("login")
 
 
      
