@@ -11,16 +11,23 @@ from django.contrib.auth import authenticate
 import locale
 
 
+
 varUniverse = "Benehime"
 # Create your views here.
 def moeda(valor):
+        
+        novo_valor = f"{valor:_.2f}"
+        novo_valor = novo_valor.replace(".",",").replace("_",".")
 
+        return novo_valor
+        """
         locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
         valor = locale.currency(valor, grouping=True, symbol=None)
 
         return valor
-
+        """
+        
 
 def totalT(d1,d2,banco,tab):
      valor = 0;
