@@ -47,3 +47,7 @@ def cadastrarTema(dados):
     
     temaEscolhido.save()
 
+def cadastraOp(opcao):
+    op = Opcoes()
+    op.nome_op = opcao
+    op.save()

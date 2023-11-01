@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Empresa, EmpresaDFV, Opcoes, cadastrarNaTab, tema, cadastrarTema
+from .models import Empresa, EmpresaDFV, Opcoes, cadastrarNaTab, tema, cadastrarTema, cadastraOp
 from datetime import date as dt
 from datetime import timedelta 
 from django.contrib.auth.decorators import login_required
@@ -617,7 +617,7 @@ def cadastrarUser(request):
 
     return render(request,"cadastrar.html")
 
-
+@login_required
 def Config(request):
      
      tema1 = tema.objects.get(user_id=request.user.id)
@@ -636,6 +636,23 @@ def Config(request):
 def inicio(request):
      return redirect("SelectEmpresa")
     
+@login_required
+def cadastrarOp(request):
+    tema1 = tema.objects.get(user_id=request.user.id)
+
+    msg = {"msg":"cadastre a opção que deseja","tema":tema1}
+     
+    if request.method == "POST":
+        op = request.POST.get("opcao")
+        cadastraOp(op)
+        print("cadastrou op\n")
+        msg["msg"] = f"Opção {op} cadastrada com sucesso!"
+
+
+
+    return render(request,"cadastrarOp.html",msg)
+
+
 
 
 

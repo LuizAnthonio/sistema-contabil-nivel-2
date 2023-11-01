@@ -15,6 +15,7 @@ urlpatterns = [
     path("<int:empresaSelec>/periodo/",views.Periodo,name="periodo"),
     path("config/",views.Config,name="config"),
     path("secreto/supersecreto/cadastrar/user/",views.cadastrarUser,name="registrarUser"),
+    path("cadastrar/opcao/",views.cadastrarOp,name="registrarOp"),
     path("<int:empresaSelec>/<str:opGlob>-detalhada/<int:mes>/<int:ano>/",views.Detalhamento,name="Detalhamento"),
     path('accounts/',include("django.contrib.auth.urls"))
    

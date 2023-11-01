@@ -1,0 +1,35 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+<title>Cadastrar Opção</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="botoes inicial-3 direita-2">
+   
+    <a href="/select-empresa" class="ski-btn-a ">voltar</a>
+   
+</div>
+
+<div class="center inicial">
+    <h1 class="title inicial-2">Cadastrar Opção</h1>
+    <form method="post" class="ski-form-1 " action="{% url 'registrarOp' %}">
+        {% csrf_token %}
+        
+        
+        <p class="title">{{msg}}</p>
+        <input type="text" name="opcao" class="input-1 extend" placeholder="Digite o nome da opção ">
+        
+        
+        <button class="ski-btn-3 extend">Registrar Opção</button>
+    
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}
