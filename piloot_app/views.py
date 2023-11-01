@@ -573,7 +573,7 @@ def lancar(request):
 
 def cadastrarUser(request):
 
-    print(User.objects.filter(username="john"))
+    
 
     if(request.method == "POST"):
         username = request.POST.get("username")
