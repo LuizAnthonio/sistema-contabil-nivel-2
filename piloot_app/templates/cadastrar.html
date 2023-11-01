@@ -12,6 +12,16 @@
 
     <section class="ski-alinhar ski-fcolum inicial">
         <h1 class="title title-2 inicial-2">Cadastrar novo user</h1>
+
+        {% if msg %}
+
+        <p class="title inicial-3">{{msg}}</p>
+
+        {% else %}
+
+        <p></p>
+
+        {% endif %}
         <form class="ski-form-1" method="POST" action="{% url 'registrarUser' %}">
             {% csrf_token %}
             <label class="ski-fcolum" >
