@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Cadastrar</title>
+</head>
+<body>
+
+    <section class="ski-alinhar ski-fcolum inicial">
+        <h1 class="title title-2 inicial-2">Cadastrar novo user</h1>
+        <form class="ski-form-1" method="POST" action="{% url 'registrarUser' %}">
+            {% csrf_token %}
+            <label class="ski-fcolum" >
+                <span>User</span>
+                <input type="text" required name="username" class="input-1">
+            </label>
+            
+            <label class="ski-fcolum" >
+                <span>Senha</span>
+                <input type="password" required name="password" class="input-1">
+            </label>
+
+            <select name="tema" class="input-1 extend">
+            
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+    
+            <button class="ski-btn-3">cadastrar</button>
+    
+        </form>
+
+    </section>
+</body>
+</html>

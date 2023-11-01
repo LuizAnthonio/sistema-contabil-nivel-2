@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
-from .models import Empresa, EmpresaDFV, Opcoes, cadastrarNaTab, tema
+from .models import Empresa, EmpresaDFV, Opcoes, cadastrarNaTab, tema, cadastrarTema
 from datetime import date as dt
 from datetime import timedelta 
 from django.contrib.auth.decorators import login_required
 from django.db import models
 from django.db.models import Avg, Count, Sum
 from dateutil.relativedelta import relativedelta
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 import locale
 
 
@@ -163,8 +165,6 @@ def home(request,empresaSelec):
 
 
     return render(request,'home.html',dados)
-
-
 
 @login_required
 def Anual(request,ano,tipo,empresaSelec):
@@ -485,9 +485,6 @@ def Periodo(request,empresaSelec):
     print("valor total ",totalMes)
     return render(request,'periodo.html',infos)
 
-    
-
-
 @login_required
 def registerEmpresa(request):
 
@@ -574,6 +571,46 @@ def lancar(request):
         return render(request,'registrar.html',opcoes)
     
 
+def cadastrarUser(request):
+
+    print(User.objects.filter(username="john"))
+
+    if(request.method == "POST"):
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        tema = request.POST.get("tema")
+         
+
+        user = User.objects.filter(username=username)
+
+        if user:
+             return render(request,"cadastrar.html",{"msg":"Já existe uma pessoa com esse nome"})
+
+
+        user = User.objects.create_user(username=username,password=password)
+        user.save()
+
+        print("criou\n")
+
+        idUser = User.objects.get(username=username)
+        print(idUser)
+        print(idUser.id)
+        dadosTema = {"user":idUser,"temaEsc":tema}
+        cadastrarTema(dadosTema)
+        print("tema cadastrado!\n")
+
+        
+
+
+        return render(request,"cadastrar.html")
+
+
+     
+
+
+    return render(request,"cadastrar.html")
+
+
 def Config(request):
      
      tema1 = tema.objects.get(user_id=request.user.id)
@@ -589,8 +626,6 @@ def Config(request):
      else:
         return render(request,'config.html',{"tema":tema1})
           
-
-
 def inicio(request):
      return redirect("SelectEmpresa")
     

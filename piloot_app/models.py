@@ -39,3 +39,11 @@ def cadastrarNaTab(dados):
     empresaDados.qtd_parcelas = dados["qtd"]
     empresaDados.save()
 
+
+def cadastrarTema(dados):
+    temaEscolhido = tema()
+    temaEscolhido.user = dados["user"]
+    temaEscolhido.tema_escolhido = dados["temaEsc"]
+    
+    temaEscolhido.save()
+
